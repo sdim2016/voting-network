@@ -17,7 +17,7 @@
  */
 rule EverybodyCanReadEverything {
     description: "Allow all participants read access to all resources"
-    participant: "org.xamk.SampleParticipant"
+    participant: "org.xamk.voter"
     operation: READ
     resource: "org.xamk.*"
     action: ALLOW
@@ -25,17 +25,17 @@ rule EverybodyCanReadEverything {
 
 rule EverybodyCanSubmitTransactions {
     description: "Allow all participants to submit transactions"
-    participant: "org.xamk.SampleParticipant"
+    participant: "org.xamk.Voter"
     operation: CREATE
-    resource: "org.xamk.SampleTransaction"
+    resource: "org.xamk.MakeVote"
     action: ALLOW
 }
 
 rule OwnerHasFullAccessToTheirAssets {
     description: "Allow all participants full access to their assets"
-    participant(p): "org.xamk.SampleParticipant"
+    participant(p): "org.xamk.Voter"
     operation: ALL
-    resource(r): "org.xamk.SampleAsset"
+    resource(r): "org.xamk.MakeVote"
     condition: (r.owner.getIdentifier() === p.getIdentifier())
     action: ALLOW
 }
