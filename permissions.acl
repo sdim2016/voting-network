@@ -17,7 +17,7 @@
  */
 rule EverybodyCanReadEverything {
     description: "Allow all participants read access to all resources"
-    participant: "org.xamk.voter"
+    participant: "org.xamk.Voter"
     operation: READ
     resource: "org.xamk.*"
     action: ALLOW
