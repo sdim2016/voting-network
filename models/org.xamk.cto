@@ -18,25 +18,17 @@
 
 namespace org.xamk
 
-participant SampleParticipant identified by participantId {
-  o String participantId
-  o String firstName
-  o String lastName
+participant Voter identified by username {
+  o String username
+  o Boolean voted default=false
 }
 
-asset SampleAsset identified by assetId {
-  o String assetId
-  --> SampleParticipant owner
-  o String value
+asset Candidate identified by name {
+  o String name
+  o Integer votes default=0
 }
 
-transaction SampleTransaction {
-  --> SampleAsset asset
-  o String newValue
-}
-
-event SampleEvent {
-  --> SampleAsset asset
-  o String oldValue
-  o String newValue
+transaction MakeVote {
+  --> Voter voter
+  --> Candidate candidate
 }
