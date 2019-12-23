@@ -1,0 +1,460 @@
+    1  curl -O https://hyperledger.github.io/composer/v0.19/prereqs-ubuntu.sh
+    2  ls
+    3  chmod u+x prereqs-ubuntu.sh 
+    4  ./prereqs-ubuntu.sh 
+    5  exit
+    6  npm install -g composer-cli@0.19
+    7  ls
+    8  ls -ll
+    9  npm install -g composer-rest-server@0.19
+   10  npm install -g generator-hyperledger-composer@0.19
+   11  npm install -g yo
+   12  npm install -g composer-playground@0.19
+   13  mkdir ~/fabric-dev-servers && cd ~/fabric-dev-servers
+   14  curl -O https://raw.githubusercontent.com/hyperledger/composer-tools/master/packages/fabric-dev-servers/fabric-dev-servers.tar.gz
+   15  tar -xvf fabric-dev-servers.tar.gzls
+   16  ls
+   17  tar -xvf fabric-dev-servers.tar.gz
+   18  ls
+   19  cd ~/fabric-dev-servers/
+   20  export FABRIC_VERSION=hlfv14
+   21  ./downloadFabric.sh
+   22  export FABRIC_VERSION=hlfv12
+   23  ./downloadFabric.sh
+   24  export FABRIC_VERSION=hlfv12
+   25  ./startFabric.sh 
+   26  ps aux
+   27  ps aux --help
+   28  ps --help
+   29  ps --help output
+   30  ps aux
+   31  docker --help
+   32  docker images
+   33  docker container ls
+   34  tmux add -s playground
+   35  tmux new -s playground
+   36  ./createPeerAdminCard.sh 
+   37  ls
+   38  ./stopFabric.sh 
+   39  ./teardownFabric.sh 
+   40  ./teardownAllDocker.sh 
+   41  export FABRIC_VERSION=hlfv11
+   42  ./startFabric.sh 
+   43  ./createPeerAdminCard.sh
+   44  yo hyperledger-composer
+   45  ls
+   46  cd tech
+   47  cd tech-trading-network/
+   48  ls
+   49  cd models/
+   50  ls
+   51  vim org.example.biznet.cto 
+   52  composer archive create -t dir -n .
+   53  cd ..
+   54  composer archive create -t dir -n .
+   55  ls
+   56  composer network ping
+   57  composer network ping -c PeerAdmin@hlfv1
+   58  composer network install --archiveFile cards-trading-network@0.0.1.bna --card PeerAdmin@hlfv1
+   59  composer network install --archiveFile tech-trading-network@0.0.1.bna --card PeerAdmin@hlfv1
+   60  composer card list
+   61  composer network ping -c PeerAdmin@hlfv1
+   62  composer network ping -c PeerAdmin@hlfv1 --help
+   63  composer card --help
+   64  composer card create --help
+   65  ls
+   66  cd mod
+   67  cd models/
+   68  ls
+   69  cd ..
+   70  tmux new -s rest
+   71  composer network install --archiveFile tech-trading-network@0.0.1.bna --card PeerAdmin@hlfv1
+   72  composer network upgrade -c PeerAdmin@hlfv1 -n tech-trading-network -V 0.0.1
+   73  composer network start --networkName tech-trading-network --networkVersion 0.0.1 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file tech-trading-admin.card
+   74  df commands
+   75  df command
+   76  df
+   77  nano /proc/meminfo
+   78  cd fabric-dev-servers/tech-trading-network/
+   79  composer network start --networkName tech-trading-network --networkVersion 0.0.1 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file tech-trading-admin.card
+   80  docker system prune
+   81  ls
+   82  cd ..
+   83  ls
+   84  ./stopFabric.sh 
+   85  composer-rest-server 
+   86  composer-playground 
+   87  ls
+   88  cd composer-sample-networks/
+   89  ls
+   90  cd packages/
+   91  ls
+   92  mkdir sdp
+   93  cd sdp
+   94  git config --global user.name "My Friend"
+   95  git config --global user.email "odmsl002@edu.xamk.fi"
+   96  got config --global
+   97  git config --global
+   98  git config --global user.name
+   99  tmux new -s sdp
+  100  composer-playground --help
+  101  composer-playground
+  102  ls
+  103  free -h
+  104  docker ps
+  105  docker ps -a
+  106  ls
+  107  cd fabric-dev-servers/
+  108  ls
+  109  sudo ./stopFabric.sh 
+  110  sudo ./startFabric.sh 
+  111  docker ps
+  112  free -h
+  113  ls
+  114  cd ..
+  115  ls
+  116  cd fabric-dev-servers/
+  117  ls
+  118  cd ..
+  119  ls
+  120  cd composer-sample-networks/
+  121  ls
+  122  cd packages/
+  123  ls
+  124  cd basic-sample-network/
+  125  ls
+  126  composer card
+  127  composer cards
+  128  composer card list
+  129  composer network start --card PeerAdmin@hlfv1 -A admin -S adminpw -a basic-sample-network@0.2.6.bna -f bsn-admin.card 
+  130  history
+  131  composer network start --networkName basic-sample-network --networkVersion 0.2.6 --card PeerAdmin@hlfv1 -A admin -S adminpw -a basic-sample-network@0.2.6.bna -f bsn-admin.card 
+  132  composer network start --networkName basic-sample-network --networkVersion 0.2.6 --card PeerAdmin@hlfv1 -A admin -S adminpw --card basic-sample-network@0.2.6.bna -f bsn-admin.card 
+  133  ls
+  134  composer card list
+  135  composer network start --networkName basic-sample-network --networkVersion 0.2.6 --card PeerAdmin@hlfv1 -A admin -S adminpw --cardcomposer network start --networkName tech-trading-network --networkVersio                                                                                                                                                             n 0.0.1 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin                                                                                                                                                             @hlfv1 --file tech-trading-admin.card basic-sample-network@0.2.6.bna -f bsn-admin.card 
+  136  composer network start --networkName tech-trading-network --networkVersion 0.0.1 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file tech-trading-admin.card basic-sample-network@0.2.6.bna -f bsn-admin.card 
+  137  ls
+  138  cd ..
+  139  ls
+  140  cd trade-network/
+  141  ls
+  142  cd ..
+  143  ls
+  144  cd sdp
+  145  ls
+  146  cd ..
+  147  cd composer-sample-networks/
+  148  ls
+  149  cd packages/
+  150  ls
+  151  cd basic-sample-network/
+  152  ls
+  153  composer network start --networkName basic-sample-network --networkVersion 0.0.1 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file bsn-admin.card basic-sample-network@0.2.6.bna
+  154  composer runtime install --card PeerAdmin@hlfv1 --businessNetworkName perishable-network
+  155  composer runtime install --card PeerAdmin@hlfv1 --businessNetworkName basic-sample-network
+  156  composer network install --card PeerAdmin@hlfv1 --businessNetworkName basic-sample-network
+  157  composer network install --card PeerAdmin@hlfv1 --businessNetworkName basic-sample-network -a basic-sample-network@0.2.6.bna
+  158  composer network install --card PeerAdmin@hlfv1 -a basic-sample-network@0.2.6.bna
+  159  composer network start --networkName basic-sample-network --networkVersion 0.0.1 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file bsn-admin.card
+  160  composer network --help
+  161  composer network list
+  162  composer network list -v bsn-admin.card 
+  163  composer network list -c bsn-admin.card 
+  164  ks
+  165  l
+  166  composer network list -c basic-sample-network@0.2.6.bna 
+  167  composer network list -c PeerAdmin@hlfv1
+  168  composer network list -c admin@basic-sample-network
+  169  composer network start --help
+  170  composer card list
+  171  composer network start -c admin@basic-sample-network -n basic-sample-network -V 0.2.6 -A admin -S adminpw
+  172  free -m
+  173  composer --help
+  174  composer network start -c PeerAdmin@hlfv1 -n basic-sample-network -V 0.2.6 -A admin -S adminpw
+  175  free -m
+  176  composer network ping admin@basic-sample-network
+  177  ls
+  178  composer network ping admin@basic-sample-network
+  179  composer network ping -c PeerAdmin@hlfv1
+  180  composer card list
+  181  composer network ping -c admin@basic-sample-network
+  182  composer network ping -c admin@basic-sample-network.card 
+  183  tmux --help
+  184  man tmux
+  185  tmux new -s playground
+  186  free -m
+  187  tmux attach -t playground
+  188  cd ../../..
+  189  ls
+  190  cd fabric-dev-servers/
+  191  ls
+  192  sudo ./stopFabric.sh 
+  193  sudo ./teardownFabric.sh 
+  194  composer card list
+  195  docker ps -a
+  196  docker kill $(docker ps -q)
+  197  docker rm $(docker ps -aq)
+  198  docker ps -a
+  199  rm -rf ~/.composer-connection-profiles
+  200  rm -rf ~/.composer-credentials
+  201  composer card list
+  202  ls
+  203  sudo ./startFabric.sh 
+  204  cd ..
+  205  ls
+  206  mkdir voting-network
+  207  cd voting-network/
+  208  ls ..
+  209  ls
+  210  ls -ll
+  211  composer network instal --help
+  212  composer network install --help
+  213  composer network install -a voting-network.bna -c PeerAdmin@hlfv1
+  214  composer network start --help
+  215  composer network start -c PeerAdmin@hlfv1 -n voting-network -V 0.0.2-deploy.5 -A admin -S adminpw -f voting.card
+  216  ls
+  217  composer card import voting.card 
+  218  composer card import -f voting.card 
+  219  composer card list
+  220  composer network ping --help
+  221  composer network ping -c admin@voting-network
+  222  composer -v
+  223  npm outdated -g
+  224  npm outdated -g --depth=0
+  225  npm update -g
+  226  npm outdated -g --depth=0
+  227  npm update -g
+  228  npm outdated -g
+  229  npm update -g composer-cli
+  230  npm outdated -g
+  231  npm update -g composer-cli@0.20.9
+  232  npm install -g composer-cli@0.20.9
+  233  npm outdated -g
+  234  npm install -g composer-playground@0.20.9
+  235  npm install -g composer-rest-server@0.20.9
+  236  npm install -g generator-hyperledger-composer@0.20.9
+  237  ls
+  238  composer --version
+  239  composer card list
+  240  composer network ping --help
+  241  composer network ping -c admin@voting-network
+  242  composer archive --help
+  243  cd ..
+  244  ls
+  245  git clone https://github.com/html5-ninja/hyperledger-vote-app.git
+  246  ls
+  247  cd hyperledger-vote-app/
+  248  ls
+  249  cd vote-network/
+  250  ls
+  251  composer archive create --help
+  252  composer archive create -t dir -n .
+  253  composer network install -a vote-network@0.0.6.bna -c PeerAdmin@hlfv1
+  254  composer network start -c PeerAdmin@hlfv1 -n vote-network -V 0.0.6 -A admin -S adminpw -f voting.card
+  255  composer card list
+  256  composer card import -f voting.card 
+  257  composer card list
+  258  composer network ping -c admin@vote-network
+  259  free -m
+  260  tmux add -s playground
+  261  tmux new -s playground
+  262  tmux attach -t playground
+  263  free -m
+  264  tmux new -s rest
+  265  ls -ll
+  266  cd voting-network/
+  267  ls
+  268  composer card list
+  269  free -m
+  270  composer network start -c PeerAdmin@hlfv1 -n vote-network -V 0.0.6 -A admin -S adminpw -f voting.card
+  271  cd ..
+  272  history
+  273  ls
+  274  cd composer-sample-networks/
+  275  ls
+  276  cd ..
+  277  cd fabric-dev-servers/
+  278  ls
+  279  sudo ./stopFabric.sh 
+  280  sudo ./startFabric.sh 
+  281  cd ..
+  282  ls
+  283  cd voting-network/
+  284  composer network start -c PeerAdmin@hlfv1 -n vote-network -V 0.0.6 -A admin -S adminpw -f voting.card
+  285  cd ..
+  286  ls -ll
+  287  cd hyperledger-vote-app/
+  288  ls
+  289  ls -ll
+  290  cd vote-network/
+  291  ls
+  292  cd ..
+  293  cd vote-app/
+  294  ls
+  295  cd server/
+  296  ls
+  297  cd ../..
+  298  ls
+  299  cd vote-
+  300  cd vote-network/
+  301  ls
+  302  ls -ll
+  303  composer network start -c PeerAdmin@hlfv1 -n vote-network -V 0.0.6 -A admin -S adminpw -f voting.card
+  304  composer network install -a vote-network@0.0.6.bna -c PeerAdmin@hlfv1
+  305  composer network start -c PeerAdmin@hlfv1 -n vote-network -V 0.0.6 -A admin -S adminpw -f voting.card
+  306  tmux new -s playground
+  307  free -m
+  308  tmux new -s rest
+  309  tmux attach -t rest
+  310  composer cards list
+  311  composer card list
+  312  tmux attach -t rest
+  313  ls
+  314  composer cards list
+  315  composer card list
+  316  tmux attach -t rest
+  317  tmux attach -t playground
+  318  free -m
+  319  tmux attach -t rest
+  320  curl https://localhost:3000
+  321  curl http://localhost:3000
+  322  curl http://localhost:3000/explorer/
+  323  ls -ll
+  324  logout
+  325  history
+  326  ls
+  327  cd fabric-dev-servers/
+  328  ls
+  329  nano stopFabric.sh 
+  330  ${BASH_SOURCE[0]}
+  331  echo ${BASH_SOURCE[0]}
+  332  echo BASH_SOURCE[0]
+  333  BASH_SOURCE[0]
+  334  $BASH_SOURCE[0]
+  335  $BASH_SOURCE
+  336  printenv | grep BASH_SOURCE
+  337  printenv | grep BASH
+  338  printenv | grep BA
+  339  printenv | grep B
+  340  printenv | grep hlfv
+  341  nano teardown
+  342  nano teardownFabric.sh 
+  343  echo "[$0] vs. [${BASH_SOURCE[0]}]"
+  344  nano startFabric.sh 
+  345  nano _loader.sh 
+  346  cd fabric-scripts/
+  347  ls
+  348  cd hlfv12
+  349  ls
+  350  nano stopFabric.sh 
+  351  nano startFabric.sh 
+  352  tmux attach -t playground
+  353  cd ~
+  354  ls
+  355  yo hyperledger-composer
+  356  ls
+  357  ls -ll
+  358  cd sdp-voting-network/
+  359  ls
+  360  nano package.json 
+  361  cd ..
+  362  ls
+  363  cd voting-network/
+  364  ls
+  365  cd ..
+  366  cd hyperledger-vote-app/
+  367  ls
+  368  cd vote-network/
+  369  ls
+  370  ls -al
+  371  nano package.json 
+  372  cd ~
+  373  cd sdp-voting-network/
+  374  ls -al
+  375  cd ..
+  376  mkdir sdp-last
+  377  cd sdp-last/
+  378  yo hyperledger-composer
+  379  npm install
+  380  git init
+  381  git add *
+  382  git status
+  383  git commit -m "Initially generated network"
+  384  git status
+  385  git history
+  386  git log
+  387  git commit --amend --author="Dmitrii Slepnev <odmsl002@edu.xamk.fi>"
+  388  git log
+  389  git config --global user.name Dmitrii Slepnev
+  390  git remote add origin https://github.com/sdim2016/voting-network.git
+  391  git push -u origin master
+  392  ls
+  393  ls -la
+  394  rm -rf .git
+  395  ls -la
+  396  git status
+  397  cd sdp-voting-network/
+  398  ls
+  399  git init
+  400  git commit -am "Initially generated network"
+  401  rm -rf .git
+  402  git init
+  403  git add *
+  404  git commit -m "Initially generated network"
+  405  git log
+  406  git config --global user.name "Dmitrii Slepnev"
+  407  git config --global user.name="Dmitrii Slepnev"
+  408  git config --global user.name "Dmitrii Slepnev"
+  409  git config --global user.name
+  410  git config --global --replace-all user.name="Dmitrii Slepnev"
+  411  git config --replace-all --global user.name="Dmitrii Slepnev"
+  412  git config --replace-all --global user.name "Dmitrii Slepnev"
+  413  git config --global user.name
+  414  rm -rf .git
+  415  git init
+  416  git add *
+  417  git commit -m "Initially generated network"
+  418  git remote add origin https://github.com/sdim2016/voting-network.git
+  419  git push -u origin master
+  420  free -m
+  421  git pull
+  422  git log --help
+  423  git log --oneline
+  424  history
+  425  composer archive create
+  426  composer archive create -t dir -n .
+  427  git pull
+  428  composer archive create -t dir -n .
+  429  git pull
+  430  composer archive create -t dir -n .
+  431  composer network install -a sdp-voting-network@0.0.1.bna -c PeerAdmin@hlfv1
+  432  ls
+  433  composer network start -c PeerAdmin@hlfv1 -n sdp-voting-network -V 0.0.1 -A admin -S adminpw -f voting.card
+  434  ls
+  435  composer cards list
+  436  composer card list
+  437  composer card import -f voting.card
+  438  composer card list
+  439  composer network ping -c admin@sdp-voting-network
+  440  cd sdp-last/sdp-voting-network/
+  441  composer --help
+  442  composer participant add
+  443  composer report
+  444  composer transaction submit --card admin@sdp-voting-network -d '{"$class": "org.hyperledger.composer.system.AddAsset", "targetRegistry": "re-source:org.hyperledger.composer.system.AssetRegistry#org.xamk.Candidate", "resources": [{"$class": "org.xamk.Candidate", "name": "CandidateName", "votes": 0}]}'
+  445  composer transaction submit --card admin@sdp-voting-network -d '{"$class": "org.hyperledger.composer.system.AddAsset", "targetRegistry": "resource:org.hyperledger.composer.system.AssetRegistry#org.xamk.Candidate", "resources": [{"$class": "org.xamk.Candidate", "name": "CandidateName", "votes": 0}]}'
+  446  tmux ls
+  447  tmux -t rest
+  448  tmux attach -t rest
+  449  tmux new -s rest-sdp
+  450  tmux ls
+  451  tmux attach -t rest
+  452  logout
+  453  cd /var/www/html
+  454  cd /var/www/html/
+  455  cd /var/www/
+  456  logout
+  457  free -m
+  458  logout
+  459  history
+  460  history >> composerhist.txt
